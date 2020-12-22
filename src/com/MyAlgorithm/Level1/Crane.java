@@ -2,7 +2,7 @@ package com.MyAlgorithm.Level1;
 
 
 /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/64061>
-    2020.12.03.
+ * 2020.12.03.
  * 1x1크기의 칸들로 이뤄진 NxN크기의 정사각 격자
  * 인형들은 1x1크기 한칸을 차지
  * 격자의 가장 아래 칸부터 쌓여있음
@@ -23,7 +23,7 @@ public class Crane {
         int[] basket = new int[board.length * board.length];
         int temp;
         int answer = 0;
-        int basket_index = 0;
+        int basketIndex = 0;
 
         for (int i = 0; i < moves.length; i++) {
             for (int j = 0; j < board.length; j++) {
@@ -31,19 +31,19 @@ public class Crane {
                     temp = board[j][moves[i] - 1];
                     board[j][moves[i] - 1] = 0;
 
-                    basket[basket_index] = temp;
+                    basket[basketIndex] = temp;
 
-                    if (basket_index > 0) {
-                        if (basket[basket_index] == basket[basket_index - 1]) {
-                            basket[basket_index] = 0;
-                            basket[basket_index - 1] = 0;
+                    if (basketIndex > 0) {
+                        if (basket[basketIndex] == basket[basketIndex - 1]) {
+                            basket[basketIndex] = 0;
+                            basket[basketIndex - 1] = 0;
 
                             answer += 2;
-                            basket_index--;
+                            basketIndex--;
                             break;
                         }
                     }
-                    basket_index++;
+                    basketIndex++;
                     break;
                 }
             }
@@ -73,19 +73,19 @@ public class Crane {
                 temp = board[j][move - 1];
                 board[j][move - 1] = 0;
 
-                basket[basket_index] = temp;
+                basket[basketIndex] = temp;
 
-                if (basket_index > 0) {
-                    if (basket[basket_index] == basket[basket_index - 1]) {
-                        basket[basket_index] = 0;
-                        basket[basket_index - 1] = 0;
+                if (basketIndex > 0) {
+                    if (basket[basketIndex] == basket[basketIndex - 1]) {
+                        basket[basketIndex] = 0;
+                        basket[basketIndex - 1] = 0;
 
                         answer += 2;
-                        basket_index--;
+                        basketIndex--;
                         break;
                     }
                 }
-                basket_index++;
+                basketIndex++;
                 break;
             }
         }

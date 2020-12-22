@@ -2,6 +2,7 @@ package com.MyAlgorithm.Level1;
 
 /*
  * <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/42840>
+ * 2020.12.09.
  * 1번 수포자 찍는 방식 : 1,2,3,4,5 반복
  * 2번 수포자 찍는 방식 : 2,1,2,3,2,4,2,5 반복
  * 3번 수포자 찍는 방식 : 3,3,1,1,2,2,4,4,5,5 반복
@@ -11,7 +12,7 @@ package com.MyAlgorithm.Level1;
  * */
 
 
-public class Practice_Exam {
+public class PracticeExam {
 
     public static int[] solution(int[] answers) {
         // 각 학생별 답안 패턴

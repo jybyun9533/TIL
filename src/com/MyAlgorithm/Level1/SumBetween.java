@@ -7,7 +7,7 @@ package com.MyAlgorithm.Level1;
  * a, b 대소관게 x
  * */
 
-public class Sum_Between {
+public class SumBetween {
 
     public static long solution(int a, int b) {
 

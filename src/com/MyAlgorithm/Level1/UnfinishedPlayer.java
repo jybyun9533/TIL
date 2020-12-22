@@ -3,6 +3,7 @@ package com.MyAlgorithm.Level1;
 import java.util.HashMap;
 
 /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/42576>
+ * 2020.12.08.
  * 단 한명의 선수를 제외하고 모든 선수가 마라톤을 완주
  * participant[] : 마라톤 참여한 선수 (1이상 100,000 이하)
  * completion[] : 완주한 선수 (participant.length-1)
@@ -12,7 +13,7 @@ import java.util.HashMap;
  * 1. 이중포문 사용시 효율성이 떨어짐 : 이중포문 사용X
  *  ->Hashmap을 사용해서 구현
  */
-public class Unfinished_Player {
+public class UnfinishedPlayer {
 
     public static String solution(String[] participant, String[] completion) {
         String answer = "";

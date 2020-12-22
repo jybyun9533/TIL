@@ -1,6 +1,7 @@
 package com.MyAlgorithm.Level1;
 
 /* <문제 정의 : https://programmers.co.kr/learn/courses/30/lessons/12910>
+ * 2020.12.18.
  * arr의 각 원소중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수
  * 나누어 떨어지는 원소가 업다면 -1을 return
  * arr[] : 자연수를 담은 배열, 1이상의 길이

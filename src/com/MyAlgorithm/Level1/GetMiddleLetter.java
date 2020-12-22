@@ -1,11 +1,12 @@
 package com.MyAlgorithm.Level1;
 /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/12903>
+ * 2020.12.16.
  * 단어 s의 가운데 글자를 반환하느 함수 만들기
  * s의 길이는 1이상, 100이하
  */
 
 
-public class Get_MiddleLetter {
+public class GetMiddleLetter {
     public static String solution(String s) {
         String answer = "";
         if (s.length() % 2 == 0) {

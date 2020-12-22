@@ -1,6 +1,7 @@
 package com.MyAlgorithm.Level1;
 
 /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/68644>
+ * 2020.12.07.
  * 정수 배열 numbers
  * numbers에서 서로 다른 인덱스에 있는 두 개의 수를 뽑아 더해서 만들 수 있는 모든 수를 오른차순으로 담아 Return
  * numbers의 길이는 2이상 100이하
@@ -10,7 +11,7 @@ package com.MyAlgorithm.Level1;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Add_number {
+public class AddNumber {
 
     public static int[] solution(int[] numbers) {
         int index1 = 0, index2 = 1, sum = 0;

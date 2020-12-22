@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Uniform {
 
     /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/42862>
+     * 2020.12.10.
      * 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있음
      * 최대한 많은 학생이 체육수업을 들을수 있도록 해야함
      * n : 전체학생의 수 (2이상 30이하)

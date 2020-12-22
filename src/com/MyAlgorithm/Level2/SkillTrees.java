@@ -1,6 +1,7 @@
-package com.MyAlgorithm.Level1;
+package com.MyAlgorithm.Level2;
 
 /* <문제 정의 : https://programmers.co.kr/learn/courses/30/lessons/49993>
+ * 2020.12.14.
  * String skill : 선행 스킬 순서, 1이상 26이하, 중복X
  * String[] skill_trees : 유저들이 만든 스킬트리, 1이상 20이하, 원소의 길이는 2이상 26이하
  * return : 가능한 스킬 트리의 개수

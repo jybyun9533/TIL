@@ -2,7 +2,9 @@ package com.MyAlgorithm.Level1;
 
 import java.util.Arrays;
 
-public class K_Number { /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/42748>
+public class KNumber {
+ /* <문제정의 : https://programmers.co.kr/learn/courses/30/lessons/42748>
+ * 2020.12.11.
  * 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬, k번째 수는?
  * array 원소 : 1이상 100이하
  * array.length : 1이상 50이하
