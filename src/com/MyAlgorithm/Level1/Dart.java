@@ -11,12 +11,15 @@ package com.MyAlgorithm.Level1;
  * 스타상과 아차상이 중첩됐을 경우 점수는 -2배
  * 스타상과 아차상은 점수마다 둘 중 하나만 존재할 수 있으며, 존재하지 않을 수 도 있다.
  * 입력 형식 : String dartResult = 점수|보너스|옵션
+ *
+ * 피드백 : Charater.isDigit : 해당 문자가 숫자인지 판단하는 메소드
  * */
 
 public class Dart {
 
     public int solution(String dartResult) {
-        int first = 0, second = 0, third = 0, answer = 0;
+        int answer = 0;
+        int[] sum = new int[3];
 
         String[] score = {String.valueOf(dartResult.charAt(0)), "", ""};
         int index = 0; // score의 index
@@ -30,31 +33,52 @@ public class Dart {
 
         for (int i = 0; i < score.length; i++) {
             String temp = "";
-            int j = 0;
+            for (int j = 0; j < score[i].length(); j++) {
+                if (Character.isDigit(score[i].charAt(j))) { // 숫자일 경우
+                    temp += score[i].charAt(j);
+                } else if (score[i].charAt(j) == '*' || score[i].charAt(j) == '#') {
+                    switch (score[i].charAt(j)) {
+                        case '*':
+                            if (i == 0) {
+                                sum[i] *= 2;
+                            } else {
+                                sum[i] *= 2;
+                                sum[i - 1] *= 2;
+                            }
+                            break;
+                        case '#':
+                            sum[i] *= (-1);
+                            break;
+                    }
+                } else {
+                    switch (score[i].charAt(j)) {
+                        case 'S':
+                            sum[i] = Integer.parseInt(temp);
+                            break;
+                        case 'D':
+                            sum[i] = Integer.parseInt(temp);
+                            sum[i] = (int) Math.pow(sum[i], 2);
+                            break;
+                        case 'T':
+                            sum[i] = Integer.parseInt(temp);
+                            sum[i] = (int) Math.pow(sum[i], 3);
+                            break;
+                    }
+                }
 
-            while (Character.isDigit(score[i].charAt(j))) {
-                temp += score[i].charAt(j);
-                j++;
             }
-            first = Integer.parseInt(temp);
-
-            switch (score[i].charAt(j)) {
-                case 'S':
-                    break;
-                case 'D':
-                    //first = Math.pow(first, 2);
-
-            }
-
         }
 
+        for (int i = 0; i < sum.length; i++) {
+            answer += sum[i];
+        }
 
         return answer;
     }
 
     public static void main(String[] args) {
         Dart dart = new Dart();
-        dart.solution("10S20D*3T");
+        dart.solution("1S2D*3T");
     }
 
 }
